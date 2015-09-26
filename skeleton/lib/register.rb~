@@ -1,0 +1,62 @@
+require './Student.rb'
+
+
+#initialize student array, store all students
+@students = []
+
+attr_reader : students
+
+
+
+def progress(option)
+  
+  if option == "1"
+    puts "You are adding a new student"
+  elsif option == "2"
+    puts "You will see all student results"
+    puts @students
+  elsif option == "3"
+    puts "Bye bye"
+    exit(1)
+  else
+    puts "Wrong selection"," "
+    start
+  end
+end 
+
+def start()
+  prompt = ">> "
+  puts "What do you want to do"
+  puts "  1. Enter students results"
+  puts "  2. View students results"
+  puts "  3. Quit the system"," "
+
+  puts "Enter your selection" 
+  print prompt
+  selection = $stdin.gets.chomp
+  progress(selection)
+end
+
+def system_begin()
+ print "*" * 20 
+ print " WELCOME TO STUDENTS ACADEMICS "
+ puts "*" * 20," "
+ 
+ start
+end
+
+system_begin
+
+
+
+
+student = Student.new("Benson", "Maruchu")
+
+students.push(student)
+
+studentTwo = Student.new("Amos", "Nzaga")
+students.push(studentTwo)
+
+students.each  do | student |
+ puts "#{student.first_Name}"
+end
