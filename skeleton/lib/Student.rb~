@@ -17,10 +17,6 @@ class Student
       @result += ue
     end
     
-    def update_result(mark)
-     @result -= mark
-    end
-    
     attr_reader :first_Name
     attr_reader :last_Name
     attr_reader :ca

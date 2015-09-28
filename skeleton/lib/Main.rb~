@@ -139,7 +139,7 @@ class Register
          get_student_reg_no()
         end
       else
-        puts "","Invilid registration number, try again",""
+        puts "","Invilid registration number",""
         get_student_reg_no()
       end
     end
